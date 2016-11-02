@@ -11,13 +11,13 @@ output "az_count" {
   value = "${var.az_count}"
 }
 output "frontsubnets" {
-  value = "${join(\",\", aws_subnet.front.*.id)}"
+  value = "${join(",", aws_subnet.front.*.id)}"
 }
 output "dedicatedsubnets" {
-    value = "${join(\",\", aws_subnet.back.*.id)}"
+    value = "${join(",", aws_subnet.back.*.id)}"
 }
 output "ephemeralsubnets" {
-    value = "${join(\",\", aws_subnet.ephemeral.*.id)}"
+    value = "${join(",", aws_subnet.ephemeral.*.id)}"
 }
 output "public-routetable" {
     value = "${aws_route_table.public.id}"
